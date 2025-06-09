@@ -165,7 +165,7 @@ html {
 
 .wedding-title {
     font-family: 'Montaga', serif;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: #5D5447;
     position: absolute;
     top: 20%;
@@ -179,7 +179,7 @@ html {
 .bride,
 .and {
     font-family: 'Pinyon Script', cursive;
-    font-size: 6rem;
+    font-size: 5.5rem;
     color: #851228;
     position: absolute;
     left: 50%;
@@ -235,7 +235,7 @@ html {
 .nama-tamu {
     top: 2.5rem;
     font-family: 'Montaga', serif;
-    font-size: 1.3rem;
+    font-size: 1rem;
     font-weight: 600;
     color: #333;
     text-align: center;
