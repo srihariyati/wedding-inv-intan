@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    font-family: sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.5s ease-in-out;
+    height: 700vh;
+    /* 7 sections, masing-masing 100vh */
+}
+
+.section {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+
+/* SECTION GREATINGS STYLES */
+
+#section-greatings {
+    position: relative;
+    background-color: #DFDED0;
+    overflow: hidden;
+}
+
+.overlap-group-wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.overlap-group {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.overlap-group img,
+.overlap-group div {
+    position: absolute;
+}
+
+
+/* Contoh posisi kasar - kamu bisa sesuaikan sesuai desain kamu */
+
+.tree {
+    top: 10px;
+    left: 0px;
+    width: 300px;
+}
+
+.img {
+    top: 10px;
+    right: 0px;
+    width: 300px;
+}
+
+.aceh-house {
+    bottom: 5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+}
+
+.pagar {
+    bottom: 5rem;
+    width: 100%;
+}
+
+.the-wedding-of {
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.text-wrapper,
+.div,
+.text-wrapper-2 {
+    font-size: 2rem;
+    color: #000;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.text-wrapper {
+    top: 40%;
+}
+
+.div {
+    top: 48%;
+}
+
+.text-wrapper-2 {
+    top: 44%;
+}
+
+.rectangle,
+.rectangle-2 {
+    width: 60%;
+    height: 40px;
+    background: white;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10px;
+    position: absolute;
+}
+
+.rectangle {
+    top: 60%;
+}
+
+.rectangle-2 {
+    top: 66%;
+}
+
+.text-wrapper-3 {
+    top: 59%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: bold;
+}
+
+.nama-tamu {
+    top: 67%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-style: italic;
+}
+
+.text-wrapper-4 {
+    top: 75%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: bold;
+    background: #fff;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+.mage-email-opened {
+    bottom: 10px;
+    right: 10px;
+}
+
+.group {
+    width: 40px;
+}
+
+.wedding-title {
+    font-family: 'Montaga', serif;
+    font-size: 1.5rem;
+    color: #5D5447;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-weight: 100;
+}
+
+.groom,
+.bride,
+.and {
+    font-family: 'Pinyon Script', cursive;
+    font-size: 6rem;
+    color: #851228;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: 100;
+}
+
+.bride {
+    top: 30%;
+}
+
+.and {
+    top: 38%;
+    left: 60%;
+}
+
+.groom {
+    top: 45%;
+}
+
+.text-wrapper-2 {
+    top: 44%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    color: #444;
+    position: absolute;
+}
+
+.box {
+    position: absolute;
+    top: 60%;
+    /* atur sesuai posisi yang diinginkan */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 242px;
+    height: 88px;
+}
+
+.rectangle {
+    width: 100%;
+    height: 100%;
+    background-color: #fffde899;
+    border-radius: 13px;
+    display: flex;
+    /* aktifkan flex untuk center */
+    align-items: center;
+    /* vertikal center */
+    justify-content: center;
+    /* horizontal center */
+}
+
+.nama-tamu {
+    top: 2.5rem;
+    font-family: 'Montaga', serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+}
+
+.greating-guests {
+    top: 1rem;
+    font-family: 'Montaga', serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #333;
+    text-align: center;
+}
+
+.box-click-invitation {
+    position: absolute;
+    top: calc(70% + 100px);
+    /* atur posisi sesuai layout */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 144px;
+    height: 32px;
+}
+
+.rectangle-small {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    color: #ffff;
+    font-size: 0.9rem;
+    font-family: 'Montaga', serif;
+    font-weight: 400;
+    background-color: #851128;
+    border-radius: 8.12px;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.rectangle-small iconify-icon {
+    font-size: 1rem;
+}
