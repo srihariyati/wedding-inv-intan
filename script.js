@@ -64,3 +64,13 @@ document.addEventListener("click", function(e) {
 
     updateSection();
 });
+
+// Ambil nama dari URL dan tampilkan
+const params = new URLSearchParams(window.location.search);
+const nama = params.get('nama');
+if (nama) {
+    const namaTamuEl = document.getElementById('namaTamu');
+    if (namaTamuEl) {
+        namaTamuEl.textContent = decodeURIComponent(nama);
+    }
+}
