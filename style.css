@@ -260,6 +260,16 @@ html {
     height: 32px;
 }
 
+.box-save-the-date {
+    position: absolute;
+    top: calc(58% + 100px);
+    /* atur posisi sesuai layout */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 144px;
+    height: 32px;
+}
+
 .rectangle-small {
     display: flex;
     align-items: center;
@@ -279,4 +289,105 @@ html {
 
 .rectangle-small iconify-icon {
     font-size: 1rem;
+}
+
+#section-countdown {
+    height: 100vh;
+    position: relative;
+    background-color: #DFDED0;
+    /* atau warna lain */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.overlap-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* center horizontally */
+    justify-content: center;
+    /* center vertically if needed */
+    height: 100vh;
+    /* or specific height */
+    position: relative;
+}
+
+.bride-groom-img {
+    max-width: 100%;
+    height: auto;
+    margin-top: -5rem;
+    /* optional spacing */
+}
+
+.bride-groom-small {
+    font-family: 'Pinyon Script', cursive;
+    font-size: 2rem;
+    color: #851228;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: 100;
+    margin-top: 15rem;
+}
+
+.pintu-aceh {
+    position: absolute;
+    /* atau 'fixed' jika ingin tetap di layar saat scroll */
+    margin-bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 180%;
+    /* atau bisa tetap 100% jika kamu memang ingin full */
+    max-width: 200%;
+    display: block;
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* gap: 5rem; */
+    /* bisa pakai gap atau margin manual */
+    margin-top: 5rem;
+}
+
+.time {
+    text-align: center;
+    background-color: #fffde8;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.time span {
+    font-size: 2.5rem;
+    font-weight: bold;
+    display: block;
+    color: #851228;
+}
+
+.time small {
+    font-size: 1rem;
+    color: #333;
+}
+
+
+/* Kalau gap belum jalan, gunakan margin kanan manual */
+
+.time:not(:last-child) {
+    margin-right: 8rem;
+}
+
+@media (max-width: 480px) {
+    .countdown {
+        flex-direction: column;
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+    .time:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 2rem;
+    }
 }
