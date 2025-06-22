@@ -294,7 +294,6 @@ html {
 #section-countdown {
     height: 100vh;
     position: relative;
-    background-color: #DFDED0;
     /* atau warna lain */
     display: flex;
     align-items: center;
@@ -329,7 +328,7 @@ html {
     left: 50%;
     transform: translateX(-50%);
     font-weight: 100;
-    margin-top: 15rem;
+    margin-top: 16rem;
 }
 
 .pintu-aceh {
@@ -345,49 +344,539 @@ html {
 }
 
 .countdown {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* gap: 5rem; */
-    /* bisa pakai gap atau margin manual */
-    margin-top: 5rem;
+    position: absolute;
+    top: calc(58% + 150px);
+    /* atur posisi sesuai layout */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 144px;
+    height: 32px;
+    gap: 200rem;
 }
 
 .time {
     text-align: center;
-    background-color: #fffde8;
-    padding: 1rem 2rem;
-    border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    color: #851228;
+    font-family: 'Montaga', serif;
 }
 
 .time span {
     font-size: 2.5rem;
     font-weight: bold;
     display: block;
-    color: #851228;
 }
 
-.time small {
+.time div {
     font-size: 1rem;
-    color: #333;
+    color: #5D5447;
 }
 
 
 /* Kalau gap belum jalan, gunakan margin kanan manual */
 
-.time:not(:last-child) {
-    margin-right: 8rem;
-}
-
 @media (max-width: 480px) {
     .countdown {
-        flex-direction: column;
-        gap: 2rem;
-        margin-top: 2rem;
+        top: calc(58% + 120px);
+        /* lebih kecil di mobile */
+        gap: 1rem;
     }
-    .time:not(:last-child) {
-        margin-right: 0;
-        margin-bottom: 2rem;
+    .time span {
+        font-size: 2rem;
     }
+    .time div {
+        font-size: 0.9rem;
+    }
+}
+
+.section-ayath-1 {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: rgba(223, 222, 208, 1);
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.text-3 {
+    font-family: var(--font-family-montaga);
+    font-size: 1rem;
+    color: var(--text-rgb-93-84-71);
+    line-height: 1.8;
+}
+
+.text-5 {
+    font-family: var(--font-family-khalid-art-bold);
+    font-size: 1.3rem;
+    line-height: 2.3rem;
+    color: var(--text-rgb-93-84-71);
+}
+
+.corner-l-2,
+.corner-r-4 {
+    width: 80px;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .section-ayath-1 {
+        padding: 2rem 1rem;
+    }
+    .corner-l-2,
+    .corner-r-4 {
+        width: 60px;
+    }
+    .text-3 {
+        font-size: 0.9rem;
+    }
+    .text-5 {
+        font-size: 1.1rem;
+        line-height: 2rem;
+    }
+}
+
+#section-profile {
+    background-color: #DFDED0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 1rem;
+    flex-direction: column;
+}
+
+.section-profile-1 {
+    text-align: center;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.bride-profile,
+.groom-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.bride-photo img,
+.groom-photo img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #851228;
+    margin-bottom: 1rem;
+}
+
+.bride-name,
+.groom-name {
+    font-family: 'Montaga', serif;
+    font-size: 1.2rem;
+    color: #851228;
+    font-weight: bold;
+}
+
+.text-4,
+.text-11 {
+    font-family: 'Montaga', serif;
+    font-size: 0.95rem;
+    color: #5D5447;
+    margin: 0.5rem 0;
+}
+
+.frame-top-18,
+.frame-buttom-2 {
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+    margin: 2rem auto;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .bride-photo img,
+    .groom-photo img {
+        width: 120px;
+        height: 120px;
+    }
+    .bride-name,
+    .groom-name {
+        font-size: 1rem;
+    }
+    .text-4,
+    .text-11 {
+        font-size: 0.85rem;
+    }
+}
+
+
+/* Section End */
+
+#section-end {
+    background-color: #DFDED0;
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+.section-end-1 {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.pintu-aceh-2 {
+    width: 100%;
+    height: auto;
+    margin-bottom: 2rem;
+}
+
+.text-3 {
+    font-family: 'Montaga', serif;
+    font-size: 1rem;
+    color: #5D5447;
+    margin-bottom: 1rem;
+}
+
+.text-4 {
+    font-family: 'Tempting', cursive;
+    font-size: 1.8rem;
+    color: #851228;
+    margin-bottom: 2rem;
+}
+
+.bride-groom-5 .group-10-6 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.rectangle-11-7 {
+    width: 160px;
+    height: 160px;
+    background-color: #851228;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.mask-group-8 img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+    .bride-photo img,
+    .groom-photo img,
+    .mask-group-8 img {
+        width: 120px;
+        height: 120px;
+    }
+    .bride-name,
+    .groom-name,
+    .text-4 {
+        font-size: 1.2rem;
+    }
+    .text-3 {
+        font-size: 0.9rem;
+    }
+    .rectangle-11-7 {
+        width: 130px;
+        height: 130px;
+    }
+}
+
+
+/* Add font files for Montaga */
+
+@font-face {
+    font-family: 'Montaga';
+    src: url('fonts/montaga.woff2') format('woff2'), url('fonts/montaga.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/* Add font files for Vollkorn */
+
+@font-face {
+    font-family: 'Vollkorn';
+    src: url('fonts/vollkorn.woff2') format('woff2'), url('fonts/vollkorn.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --font-family-montaga: 'Montaga', sans-serif;
+    --font-family-vollkorn: 'Vollkorn', sans-serif;
+    --text-rgb-170-133-80: rgba(170, 133, 80, 1);
+    --text-rgb-93-84-71: rgba(93, 84, 71, 1);
+    --text-rgb-243-210-163: rgba(243, 210, 163, 1);
+}
+
+.text-rgb-170-133-80 {
+    color: var(--text-rgb-170-133-80);
+}
+
+.text-rgb-93-84-71 {
+    color: var(--text-rgb-93-84-71);
+}
+
+.text-rgb-243-210-163 {
+    color: var(--text-rgb-243-210-163);
+}
+
+
+/* CSS Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.untitled-design-66-1-2 {
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    width: 100%;
+    height: auto;
+}
+
+.untitled-design-66-2-3 {
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    width: 100%;
+    height: auto;
+}
+
+.untitled-design-61-1-4 {
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    width: 100%;
+    height: auto;
+}
+
+.untitled-design-67-1-5 {
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    width: 100%;
+    height: auto;
+}
+
+.rectangle-9-6 {
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    background-color: rgba(255, 253, 232, 0.8);
+    border-radius: 15.139389038085938px;
+}
+
+.text-7 {
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    font-family: var(--font-family-montaga);
+    font-weight: normal;
+    font-size: 16.56264305114746px;
+    text-decoration: none;
+    text-transform: none;
+    color: var(--text-rgb-170-133-80);
+}
+
+.text-8 {
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    font-family: var(--font-family-vollkorn);
+    font-weight: normal;
+    font-size: 43.405548095703125px;
+    text-decoration: none;
+    text-transform: none;
+    color: var(--text-rgb-170-133-80);
+}
+
+.text-9 {
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    font-family: var(--font-family-montaga);
+    font-weight: normal;
+    font-size: 24.13673210144043px;
+    text-decoration: none;
+    text-transform: none;
+    color: var(--text-rgb-170-133-80);
+}
+
+.text-10 {
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    font-family: var(--font-family-montaga);
+    font-weight: normal;
+    font-size: 10.769797325134277px;
+    text-decoration: none;
+    text-transform: none;
+    color: var(--text-rgb-93-84-71);
+}
+
+.text-11 {
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    font-family: var(--font-family-montaga);
+    font-weight: normal;
+    font-size: 16.56264305114746px;
+    text-decoration: none;
+    text-transform: none;
+    color: var(--text-rgb-170-133-80);
+}
+
+.text-12 {
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    font-family: var(--font-family-vollkorn);
+    font-weight: normal;
+    font-size: 43.405548095703125px;
+    text-decoration: none;
+    text-transform: none;
+    color: var(--text-rgb-170-133-80);
+}
+
+.text-13 {
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    font-family: var(--font-family-montaga);
+    font-weight: normal;
+    font-size: 24.13673210144043px;
+    text-decoration: none;
+    text-transform: none;
+    color: var(--text-rgb-170-133-80);
+}
+
+.rectangle-10-15 {
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    background-color: rgba(133, 18, 40, 1);
+    border-radius: 7.0469794273376465px;
+}
+
+.text-16 {
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    font-family: var(--font-family-montaga);
+    font-weight: normal;
+    font-size: 9.161600112915039px;
+    text-decoration: none;
+    text-transform: none;
+    color: var(--text-rgb-243-210-163);
+}
+
+.group-6-14 {
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+}
+
+.text-17 {
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    font-family: var(--font-family-montaga);
+    font-weight: normal;
+    font-size: 10.769797325134277px;
+    text-decoration: none;
+    text-transform: none;
+    color: var(--text-rgb-93-84-71);
+}
+
+.untitled-design-54-3-18 {
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    width: 100%;
+    height: auto;
+}
+
+.rectangle-10-20 {
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    background-color: rgba(133, 18, 40, 1);
+    border-radius: 7.0469794273376465px;
+}
+
+.text-21 {
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    font-family: var(--font-family-montaga);
+    font-weight: normal;
+    font-size: 9.161600112915039px;
+    text-decoration: none;
+    text-transform: none;
+    color: var(--text-rgb-243-210-163);
+}
+
+.group-5-19 {
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+}
+
+.untitled-design-74-1-22 {
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    width: 100%;
+    height: auto;
+}
+
+.section-date-1 {
+    @media (max-width: 1440px) {
+        .section-date-1 {
+            padding-left: 24px;
+            padding-right: 24px;
+        }
+    }
+    @media (max-width: 768px) {
+        .section-date-1 {
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+    }
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    background-color: rgba(223,
+    222,
+    208,
+    1);
 }

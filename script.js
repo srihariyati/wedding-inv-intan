@@ -75,8 +75,7 @@ if (nama) {
     }
 }
 
-
-const targetDate = new Date("2025-07-12T00:00:00").getTime();
+const targetDate = new Date("2025-07-11T00:00:00").getTime();
 
 function updateCountdown() {
     const now = new Date().getTime();
