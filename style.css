@@ -21,24 +21,25 @@ html {
     /* 7 sections, masing-masing 100vh */
 }
 
-.section {
-    width: 100vw;
+#section-greatings,
+#section-countdown,
+#section-ayath,
+#section-profile,
+#section-date,
+#section-rsvp,
+#section-end {
     height: 100vh;
+    position: relative;
+    /* atau warna lain */
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 3rem;
-    font-weight: bold;
+    flex-direction: column;
+    background-color: #DFDED0;
 }
 
 
 /* SECTION GREATINGS STYLES */
-
-#section-greatings {
-    position: relative;
-    background-color: #DFDED0;
-    overflow: hidden;
-}
 
 .overlap-group-wrapper {
     width: 100%;
@@ -55,6 +56,89 @@ html {
 .overlap-group img,
 .overlap-group div {
     position: absolute;
+}
+
+
+/* Container for all profile contents */
+
+.profile-wrapper {
+    max-width: 600px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+/* Image Frames */
+
+.frame-image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    display: block;
+    margin: 2rem auto;
+}
+
+.top-frame {
+    margin-top: 0;
+    align-self: flex-start;
+    /* pastikan berada di atas */
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.bottom-frame {
+    margin-bottom: 0;
+}
+
+
+/* Text Styles */
+
+.invitation-text {
+    font-family: 'Montaga', serif;
+    font-size: 1rem;
+    color: #5D5447;
+    margin: 1rem 0;
+}
+
+.family-info {
+    font-family: 'Montaga', serif;
+    font-size: 0.95rem;
+    color: #5D5447;
+    margin: 1rem 0 0.5rem;
+}
+
+.person-name {
+    font-family: 'Montaga', serif;
+    font-size: 1.2rem;
+    color: #851228;
+    font-weight: bold;
+    margin-top: 0.5rem;
+}
+
+
+/* Profile Blocks */
+
+.person-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+
+/* Optional Animation/Masking Placeholder */
+
+.photo-wrapper {
+    position: relative;
 }
 
 
@@ -291,16 +375,6 @@ html {
     font-size: 1rem;
 }
 
-#section-countdown {
-    height: 100vh;
-    position: relative;
-    /* atau warna lain */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
 .overlap-group {
     display: flex;
     flex-direction: column;
@@ -317,6 +391,13 @@ html {
     max-width: 100%;
     height: auto;
     margin-top: -5rem;
+    /* optional spacing */
+}
+
+.bride-groom-img-top {
+    max-width: 100%;
+    height: auto;
+    margin-top: -20rem;
     /* optional spacing */
 }
 
@@ -439,23 +520,6 @@ html {
     }
 }
 
-#section-profile {
-    background-color: #DFDED0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 3rem 1rem;
-    flex-direction: column;
-}
-
-.section-profile-1 {
-    text-align: center;
-    max-width: 800px;
-    width: 100%;
-    margin: 0 auto;
-    position: relative;
-}
-
 .bride-profile,
 .groom-profile {
     display: flex;
@@ -515,15 +579,6 @@ html {
     }
 }
 
-
-/* Section End */
-
-#section-end {
-    background-color: #DFDED0;
-    padding: 3rem 1rem;
-    text-align: center;
-}
-
 .section-end-1 {
     max-width: 800px;
     margin: 0 auto;
@@ -532,20 +587,6 @@ html {
 .pintu-aceh-2 {
     width: 100%;
     height: auto;
-    margin-bottom: 2rem;
-}
-
-.text-3 {
-    font-family: 'Montaga', serif;
-    font-size: 1rem;
-    color: #5D5447;
-    margin-bottom: 1rem;
-}
-
-.text-4 {
-    font-family: 'Tempting', cursive;
-    font-size: 1.8rem;
-    color: #851228;
     margin-bottom: 2rem;
 }
 
@@ -879,4 +920,42 @@ img {
     222,
     208,
     1);
+}
+
+
+/* section - end */
+
+.stack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* center horizontal */
+    justify-content: center;
+    /* optional: center vertical if you set height */
+    text-align: center;
+    gap: 2rem;
+    /* jarak antar elemen, bisa disesuaikan */
+    padding: 1rem;
+    /* padding opsional */
+}
+
+.stack .text-3 {
+    font-size: 16px;
+    font-family: 'Montaga', serif;
+    color: #5D5447;
+    /* Sesuaikan dengan desain */
+}
+
+.stack .text-4 {
+    font-size: 24px;
+    font-family: 'Tempting', cursive;
+    color: #851228;
+}
+
+.stack .bride-groom-img {
+    width: 100%;
+    max-width: 300px;
+    /* sesuaikan dengan kebutuhan */
+    height: auto;
+    bottom: 5rem;
 }
