@@ -206,12 +206,17 @@ section {
     color: #5D5447;
 }
 
-.toggle-music {
+.music-toggle-wrapper {
     position: fixed;
     bottom: 20px;
-    left: 20px;
+    right: 20px;
     z-index: 9999;
-    /* pastikan tombol berada paling atas */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.toggle-music {
     background-color: #851128;
     color: white;
     border: none;
@@ -220,8 +225,8 @@ section {
     height: 45px;
     font-size: 1.2rem;
     cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
