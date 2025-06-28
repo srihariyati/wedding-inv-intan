@@ -52,7 +52,7 @@ function handleSwipe() {
     updateSection();
 }
 
-// Klik atas/bawah layar (opsional)
+
 document.addEventListener("click", function(e) {
     const middle = window.innerHeight / 2;
 
@@ -65,9 +65,8 @@ document.addEventListener("click", function(e) {
     updateSection();
 });
 
-// Ambil nama dari URL dan tampilkan
 const params = new URLSearchParams(window.location.search);
-const nama = params.get('nama');
+const nama = params.get('to');
 if (nama) {
     const namaTamuEl = document.getElementById('namaTamu');
     if (namaTamuEl) {

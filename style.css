@@ -38,9 +38,6 @@ html {
     background-color: #DFDED0;
 }
 
-
-/* SECTION GREATINGS STYLES */
-
 .overlap-group-wrapper {
     width: 100%;
     height: 100%;
@@ -53,254 +50,40 @@ html {
     position: relative;
 }
 
-.overlap-group img,
-.overlap-group div {
+.img-background {
     position: absolute;
-}
-
-
-/* Container for all profile contents */
-
-.profile-wrapper {
-    max-width: 600px;
-    width: 90%;
-    margin: 0 auto;
-}
-
-
-/* Image Frames */
-
-.frame-image {
+    /* atau 'fixed' jika ingin tetap di layar saat scroll */
+    margin-bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
     width: 100%;
-    max-width: 400px;
-    height: auto;
-    display: block;
-    margin: 2rem auto;
-}
-
-.top-frame {
-    margin-top: 0;
-    align-self: flex-start;
-    /* pastikan berada di atas */
-    width: 100%;
-    max-width: 100%;
-    height: auto;
+    /* atau bisa tetap 100% jika kamu memang ingin full */
+    max-width: 200%;
     display: block;
 }
 
-.bottom-frame {
-    margin-bottom: 0;
-}
-
-
-/* Text Styles */
-
-.invitation-text {
-    font-family: 'Montaga', serif;
-    font-size: 1rem;
-    color: #5D5447;
-    margin: 1rem 0;
-}
-
-.family-info {
-    font-family: 'Montaga', serif;
-    font-size: 0.95rem;
-    color: #5D5447;
-    margin: 1rem 0 0.5rem;
-}
-
-.person-name {
-    font-family: 'Montaga', serif;
-    font-size: 1.2rem;
-    color: #851228;
-    font-weight: bold;
-    margin-top: 0.5rem;
-}
-
-
-/* Profile Blocks */
-
-.person-profile {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 1rem 0;
-}
-
-.profile-photo {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 50%;
-}
-
-
-/* Optional Animation/Masking Placeholder */
-
-.photo-wrapper {
-    position: relative;
-}
-
-
-/* Contoh posisi kasar - kamu bisa sesuaikan sesuai desain kamu */
-
-.tree {
-    top: 10px;
-    left: 0px;
-    width: 300px;
-}
-
-.img {
-    top: 10px;
-    right: 0px;
-    width: 300px;
-}
-
-.aceh-house {
-    bottom: 5rem;
+.img-content {
+    position: absolute;
+    /* atau 'fixed' jika ingin tetap di layar saat scroll */
+    margin-bottom: 80px;
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
-}
-
-.pagar {
-    bottom: 5rem;
-    width: 100%;
-}
-
-.the-wedding-of {
-    top: 20%;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.text-wrapper,
-.div,
-.text-wrapper-2 {
-    font-size: 2rem;
-    color: #000;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.text-wrapper {
-    top: 40%;
-}
-
-.div {
-    top: 48%;
-}
-
-.text-wrapper-2 {
-    top: 44%;
-}
-
-.rectangle,
-.rectangle-2 {
-    width: 60%;
-    height: 40px;
-    background: white;
-    left: 50%;
-    transform: translateX(-50%);
-    border-radius: 10px;
-    position: absolute;
-}
-
-.rectangle {
-    top: 60%;
-}
-
-.rectangle-2 {
-    top: 66%;
-}
-
-.text-wrapper-3 {
-    top: 59%;
-    left: 50%;
-    transform: translateX(-50%);
-    font-weight: bold;
-}
-
-.nama-tamu {
-    top: 67%;
-    left: 50%;
-    transform: translateX(-50%);
-    font-style: italic;
-}
-
-.text-wrapper-4 {
-    top: 75%;
-    left: 50%;
-    transform: translateX(-50%);
-    font-weight: bold;
-    background: #fff;
-    padding: 10px 20px;
-    border-radius: 20px;
-}
-
-.mage-email-opened {
-    bottom: 10px;
-    right: 10px;
-}
-
-.group {
-    width: 40px;
-}
-
-.wedding-title {
-    font-family: 'Montaga', serif;
-    font-size: 1.2rem;
-    color: #5D5447;
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    font-weight: 100;
-}
-
-.groom,
-.bride,
-.and {
-    font-family: 'Pinyon Script', cursive;
-    font-size: 5.5rem;
-    color: #851228;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    font-weight: 100;
-}
-
-.bride {
-    top: 30%;
-}
-
-.and {
-    top: 38%;
-    left: 60%;
-}
-
-.groom {
-    top: 45%;
-}
-
-.text-wrapper-2 {
-    top: 44%;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 2rem;
-    color: #444;
-    position: absolute;
+    /* atau bisa tetap 100% jika kamu memang ingin full */
+    max-width: 200%;
+    display: block;
 }
 
 .box {
     position: absolute;
-    top: 60%;
-    /* atur sesuai posisi yang diinginkan */
+    top: 75%;
     left: 50%;
-    transform: translateX(-50%);
-    width: 242px;
+    transform: translate(-50%, -50%);
+    width: 260px;
     height: 88px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .rectangle {
@@ -309,44 +92,38 @@ html {
     background-color: #fffde899;
     border-radius: 13px;
     display: flex;
-    /* aktifkan flex untuk center */
     align-items: center;
-    /* vertikal center */
     justify-content: center;
-    /* horizontal center */
+    text-align: center;
+    flex-direction: column;
 }
 
-.nama-tamu {
-    top: 2.5rem;
-    font-family: 'Montaga', serif;
-    font-size: 1rem;
-    font-weight: 600;
-    color: #333;
-    text-align: center;
+.greating-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.4;
 }
 
 .greating-guests {
-    top: 1rem;
     font-family: 'Montaga', serif;
     font-size: 1rem;
     font-weight: 400;
     color: #333;
-    text-align: center;
+}
+
+.nama-tamu {
+    font-family: 'Montaga', serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+    font-style: italic;
 }
 
 .box-click-invitation {
     position: absolute;
     top: calc(70% + 100px);
-    /* atur posisi sesuai layout */
-    left: 50%;
-    transform: translateX(-50%);
-    width: 144px;
-    height: 32px;
-}
-
-.box-save-the-date {
-    position: absolute;
-    top: calc(58% + 100px);
     /* atur posisi sesuai layout */
     left: 50%;
     transform: translateX(-50%);
@@ -375,67 +152,33 @@ html {
     font-size: 1rem;
 }
 
-.overlap-group {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* center horizontally */
-    justify-content: center;
-    /* center vertically if needed */
-    height: 100vh;
-    /* or specific height */
-    position: relative;
-}
-
-.bride-groom-img {
-    max-width: 100%;
-    height: auto;
-    margin-top: -5rem;
-    /* optional spacing */
-}
-
-.bride-groom-img-top {
-    max-width: 100%;
-    height: auto;
-    margin-top: -20rem;
-    /* optional spacing */
-}
-
-.bride-groom-small {
-    font-family: 'Pinyon Script', cursive;
-    font-size: 2rem;
-    color: #851228;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    font-weight: 100;
-    margin-top: 16rem;
-}
-
-.pintu-aceh {
+.box-save-the-date {
     position: absolute;
-    /* atau 'fixed' jika ingin tetap di layar saat scroll */
-    margin-bottom: 80px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 180%;
-    /* atau bisa tetap 100% jika kamu memang ingin full */
-    max-width: 200%;
-    display: block;
-}
-
-.countdown {
-    position: absolute;
-    top: calc(58% + 150px);
+    top: calc(58% + 100px);
     /* atur posisi sesuai layout */
     left: 50%;
     transform: translateX(-50%);
     width: 144px;
     height: 32px;
-    gap: 200rem;
+}
+
+.countdown {
+    position: absolute;
+    top: calc(58% + 150px);
+    /* sesuaikan dengan layout */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    /* jarak antar kolom waktu */
 }
 
 .time {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
     color: #851228;
     font-family: 'Montaga', serif;
@@ -445,517 +188,10 @@ html {
     font-size: 2.5rem;
     font-weight: bold;
     display: block;
+    color: #851228;
 }
 
 .time div {
     font-size: 1rem;
     color: #5D5447;
-}
-
-
-/* Kalau gap belum jalan, gunakan margin kanan manual */
-
-@media (max-width: 480px) {
-    .countdown {
-        top: calc(58% + 120px);
-        /* lebih kecil di mobile */
-        gap: 1rem;
-    }
-    .time span {
-        font-size: 2rem;
-    }
-    .time div {
-        font-size: 0.9rem;
-    }
-}
-
-.section-ayath-1 {
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
-    background-color: rgba(223, 222, 208, 1);
-    padding: 3rem 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-}
-
-.text-3 {
-    font-family: var(--font-family-montaga);
-    font-size: 1rem;
-    color: var(--text-rgb-93-84-71);
-    line-height: 1.8;
-}
-
-.text-5 {
-    font-family: var(--font-family-khalid-art-bold);
-    font-size: 1.3rem;
-    line-height: 2.3rem;
-    color: var(--text-rgb-93-84-71);
-}
-
-.corner-l-2,
-.corner-r-4 {
-    width: 80px;
-    height: auto;
-}
-
-@media (max-width: 768px) {
-    .section-ayath-1 {
-        padding: 2rem 1rem;
-    }
-    .corner-l-2,
-    .corner-r-4 {
-        width: 60px;
-    }
-    .text-3 {
-        font-size: 0.9rem;
-    }
-    .text-5 {
-        font-size: 1.1rem;
-        line-height: 2rem;
-    }
-}
-
-.bride-profile,
-.groom-profile {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 1rem 0;
-}
-
-.bride-photo img,
-.groom-photo img {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 4px solid #851228;
-    margin-bottom: 1rem;
-}
-
-.bride-name,
-.groom-name {
-    font-family: 'Montaga', serif;
-    font-size: 1.2rem;
-    color: #851228;
-    font-weight: bold;
-}
-
-.text-4,
-.text-11 {
-    font-family: 'Montaga', serif;
-    font-size: 0.95rem;
-    color: #5D5447;
-    margin: 0.5rem 0;
-}
-
-.frame-top-18,
-.frame-buttom-2 {
-    width: 100%;
-    height: auto;
-    max-width: 400px;
-    margin: 2rem auto;
-    display: block;
-}
-
-@media (max-width: 768px) {
-    .bride-photo img,
-    .groom-photo img {
-        width: 120px;
-        height: 120px;
-    }
-    .bride-name,
-    .groom-name {
-        font-size: 1rem;
-    }
-    .text-4,
-    .text-11 {
-        font-size: 0.85rem;
-    }
-}
-
-.section-end-1 {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.pintu-aceh-2 {
-    width: 100%;
-    height: auto;
-    margin-bottom: 2rem;
-}
-
-.bride-groom-5 .group-10-6 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.rectangle-11-7 {
-    width: 160px;
-    height: 160px;
-    background-color: #851228;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 1rem;
-}
-
-.mask-group-8 img {
-    width: 140px;
-    height: 140px;
-    object-fit: cover;
-    border-radius: 50%;
-}
-
-@media (max-width: 768px) {
-    .bride-photo img,
-    .groom-photo img,
-    .mask-group-8 img {
-        width: 120px;
-        height: 120px;
-    }
-    .bride-name,
-    .groom-name,
-    .text-4 {
-        font-size: 1.2rem;
-    }
-    .text-3 {
-        font-size: 0.9rem;
-    }
-    .rectangle-11-7 {
-        width: 130px;
-        height: 130px;
-    }
-}
-
-
-/* Add font files for Montaga */
-
-@font-face {
-    font-family: 'Montaga';
-    src: url('fonts/montaga.woff2') format('woff2'), url('fonts/montaga.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-
-/* Add font files for Vollkorn */
-
-@font-face {
-    font-family: 'Vollkorn';
-    src: url('fonts/vollkorn.woff2') format('woff2'), url('fonts/vollkorn.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-:root {
-    --font-family-montaga: 'Montaga', sans-serif;
-    --font-family-vollkorn: 'Vollkorn', sans-serif;
-    --text-rgb-170-133-80: rgba(170, 133, 80, 1);
-    --text-rgb-93-84-71: rgba(93, 84, 71, 1);
-    --text-rgb-243-210-163: rgba(243, 210, 163, 1);
-}
-
-.text-rgb-170-133-80 {
-    color: var(--text-rgb-170-133-80);
-}
-
-.text-rgb-93-84-71 {
-    color: var(--text-rgb-93-84-71);
-}
-
-.text-rgb-243-210-163 {
-    color: var(--text-rgb-243-210-163);
-}
-
-
-/* CSS Reset */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    width: 100%;
-    min-height: 100vh;
-    overflow-x: hidden;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-.untitled-design-66-1-2 {
-    flex-grow: 0;
-    flex-shrink: 1;
-    flex-basis: auto;
-    width: 100%;
-    height: auto;
-}
-
-.untitled-design-66-2-3 {
-    flex-grow: 0;
-    flex-shrink: 1;
-    flex-basis: auto;
-    width: 100%;
-    height: auto;
-}
-
-.untitled-design-61-1-4 {
-    flex-grow: 0;
-    flex-shrink: 1;
-    flex-basis: auto;
-    width: 100%;
-    height: auto;
-}
-
-.untitled-design-67-1-5 {
-    flex-grow: 0;
-    flex-shrink: 1;
-    flex-basis: auto;
-    width: 100%;
-    height: auto;
-}
-
-.rectangle-9-6 {
-    flex-grow: 0;
-    flex-shrink: 1;
-    flex-basis: auto;
-    background-color: rgba(255, 253, 232, 0.8);
-    border-radius: 15.139389038085938px;
-}
-
-.text-7 {
-    flex-grow: 0;
-    flex-shrink: 1;
-    flex-basis: auto;
-    font-family: var(--font-family-montaga);
-    font-weight: normal;
-    font-size: 16.56264305114746px;
-    text-decoration: none;
-    text-transform: none;
-    color: var(--text-rgb-170-133-80);
-}
-
-.text-8 {
-    flex-grow: 0;
-    flex-shrink: 1;
-    flex-basis: auto;
-    font-family: var(--font-family-vollkorn);
-    font-weight: normal;
-    font-size: 43.405548095703125px;
-    text-decoration: none;
-    text-transform: none;
-    color: var(--text-rgb-170-133-80);
-}
-
-.text-9 {
-    flex-grow: 0;
-    flex-shrink: 1;
-    flex-basis: auto;
-    font-family: var(--font-family-montaga);
-    font-weight: normal;
-    font-size: 24.13673210144043px;
-    text-decoration: none;
-    text-transform: none;
-    color: var(--text-rgb-170-133-80);
-}
-
-.text-10 {
-    flex-grow: 0;
-    flex-shrink: 1;
-    flex-basis: auto;
-    font-family: var(--font-family-montaga);
-    font-weight: normal;
-    font-size: 10.769797325134277px;
-    text-decoration: none;
-    text-transform: none;
-    color: var(--text-rgb-93-84-71);
-}
-
-.text-11 {
-    flex-grow: 0;
-    flex-shrink: 1;
-    flex-basis: auto;
-    font-family: var(--font-family-montaga);
-    font-weight: normal;
-    font-size: 16.56264305114746px;
-    text-decoration: none;
-    text-transform: none;
-    color: var(--text-rgb-170-133-80);
-}
-
-.text-12 {
-    flex-grow: 0;
-    flex-shrink: 1;
-    flex-basis: auto;
-    font-family: var(--font-family-vollkorn);
-    font-weight: normal;
-    font-size: 43.405548095703125px;
-    text-decoration: none;
-    text-transform: none;
-    color: var(--text-rgb-170-133-80);
-}
-
-.text-13 {
-    flex-grow: 0;
-    flex-shrink: 1;
-    flex-basis: auto;
-    font-family: var(--font-family-montaga);
-    font-weight: normal;
-    font-size: 24.13673210144043px;
-    text-decoration: none;
-    text-transform: none;
-    color: var(--text-rgb-170-133-80);
-}
-
-.rectangle-10-15 {
-    flex-grow: 0;
-    flex-shrink: 1;
-    flex-basis: auto;
-    background-color: rgba(133, 18, 40, 1);
-    border-radius: 7.0469794273376465px;
-}
-
-.text-16 {
-    flex-grow: 0;
-    flex-shrink: 1;
-    flex-basis: auto;
-    font-family: var(--font-family-montaga);
-    font-weight: normal;
-    font-size: 9.161600112915039px;
-    text-decoration: none;
-    text-transform: none;
-    color: var(--text-rgb-243-210-163);
-}
-
-.group-6-14 {
-    flex-grow: 0;
-    flex-shrink: 1;
-    flex-basis: auto;
-}
-
-.text-17 {
-    flex-grow: 0;
-    flex-shrink: 1;
-    flex-basis: auto;
-    font-family: var(--font-family-montaga);
-    font-weight: normal;
-    font-size: 10.769797325134277px;
-    text-decoration: none;
-    text-transform: none;
-    color: var(--text-rgb-93-84-71);
-}
-
-.untitled-design-54-3-18 {
-    flex-grow: 0;
-    flex-shrink: 1;
-    flex-basis: auto;
-    width: 100%;
-    height: auto;
-}
-
-.rectangle-10-20 {
-    flex-grow: 0;
-    flex-shrink: 1;
-    flex-basis: auto;
-    background-color: rgba(133, 18, 40, 1);
-    border-radius: 7.0469794273376465px;
-}
-
-.text-21 {
-    flex-grow: 0;
-    flex-shrink: 1;
-    flex-basis: auto;
-    font-family: var(--font-family-montaga);
-    font-weight: normal;
-    font-size: 9.161600112915039px;
-    text-decoration: none;
-    text-transform: none;
-    color: var(--text-rgb-243-210-163);
-}
-
-.group-5-19 {
-    flex-grow: 0;
-    flex-shrink: 1;
-    flex-basis: auto;
-}
-
-.untitled-design-74-1-22 {
-    flex-grow: 0;
-    flex-shrink: 1;
-    flex-basis: auto;
-    width: 100%;
-    height: auto;
-}
-
-.section-date-1 {
-    @media (max-width: 1440px) {
-        .section-date-1 {
-            padding-left: 24px;
-            padding-right: 24px;
-        }
-    }
-    @media (max-width: 768px) {
-        .section-date-1 {
-            padding-left: 16px;
-            padding-right: 16px;
-        }
-    }
-    flex-grow: 0;
-    flex-shrink: 1;
-    flex-basis: auto;
-    background-color: rgba(223,
-    222,
-    208,
-    1);
-}
-
-
-/* section - end */
-
-.stack {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* center horizontal */
-    justify-content: center;
-    /* optional: center vertical if you set height */
-    text-align: center;
-    gap: 2rem;
-    /* jarak antar elemen, bisa disesuaikan */
-    padding: 1rem;
-    /* padding opsional */
-}
-
-.stack .text-3 {
-    font-size: 16px;
-    font-family: 'Montaga', serif;
-    color: #5D5447;
-    /* Sesuaikan dengan desain */
-}
-
-.stack .text-4 {
-    font-size: 24px;
-    font-family: 'Tempting', cursive;
-    color: #851228;
-}
-
-.stack .bride-groom-img {
-    width: 100%;
-    max-width: 300px;
-    /* sesuaikan dengan kebutuhan */
-    height: auto;
-    bottom: 5rem;
 }

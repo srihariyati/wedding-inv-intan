@@ -1,0 +1,43 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+* {
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+}
+
+
+/* style.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Montaga&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap');
+
+/* Class untuk menggunakan font */
+
+.montaga-regular {
+    font-family: "Montaga", serif;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.pinyon-script-regular {
+    font-family: "Pinyon Script", cursive;
+    font-style: normal;
+    font-weight: 400;
+}
+
+html,
+body {
+    margin: 0px;
+    height: 100%;
+}
+
+
+/* a blue color as a generic focus style */
+
+button:focus-visible {
+    outline: 2px solid #4a90e2 !important;
+    outline: -webkit-focus-ring-color auto 5px !important;
+}
+
+a {
+    text-decoration: none;
+}
