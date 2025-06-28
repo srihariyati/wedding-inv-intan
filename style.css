@@ -76,6 +76,7 @@ section {
     position: absolute;
     /* atau 'fixed' jika ingin tetap di layar saat scroll */
     margin-bottom: 80px;
+    top: 10%;
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
