@@ -52,13 +52,13 @@ html {
 
 .img-background {
     position: absolute;
-    /* atau 'fixed' jika ingin tetap di layar saat scroll */
-    margin-bottom: 80px;
+    /* atau 'fixed' jika ingin tetap di tempat saat scroll */
+    top: 50%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%);
     width: 100%;
-    /* atau bisa tetap 100% jika kamu memang ingin full */
-    max-width: 200%;
+    max-width: 100%;
+    /* atau ubah sesuai kebutuhan */
     display: block;
 }
 
