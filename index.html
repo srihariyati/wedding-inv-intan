@@ -11,6 +11,16 @@
 </head>
 
 <body>
+    <!-- Pemutar Audio -->
+    <audio id="bgMusic" loop>
+                <source src="audio/lagu.mp3" type="audio/mpeg">
+                Browser Anda tidak mendukung elemen audio.
+            </audio>
+
+    <!-- Tombol Toggle Musik -->
+    <button id="toggleMusic" class="toggle-music" aria-label="Toggle Musik">
+                🔊
+            </button>
     <div class="container" id="container">
 
         <section class="section" id="section-greatings">
@@ -117,16 +127,7 @@
                     <img class="img-content" src="img/section7-bride-and-groom-text.png" />
                 </div>
         </section>
-        <!-- Pemutar Audio -->
-        <audio id="bgMusic" loop>
-                <source src="audio/lagu.mp3" type="audio/mpeg">
-                Browser Anda tidak mendukung elemen audio.
-            </audio>
 
-        <!-- Tombol Toggle Musik -->
-        <button id="toggleMusic" class="toggle-music" aria-label="Toggle Musik">
-                🔊
-            </button>
         </div>
         <script src="script.js "></script>
 </body>
