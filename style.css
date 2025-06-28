@@ -63,7 +63,7 @@ section {
 .img-background {
     position: absolute;
     /* atau 'fixed' jika ingin tetap di tempat saat scroll */
-    top: 20%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
