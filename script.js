@@ -98,3 +98,23 @@ function updateCountdown() {
 
 updateCountdown();
 setInterval(updateCountdown, 1000);
+
+
+const bgMusic = document.getElementById("bgMusic");
+const toggleBtn = document.getElementById("toggleMusic");
+
+let isPlaying = false;
+
+// Mainkan musik saat halaman dimuat (dengan interaksi pengguna)
+document.addEventListener("DOMContentLoaded", () => {
+    toggleBtn.addEventListener("click", () => {
+        if (isPlaying) {
+            bgMusic.pause();
+            toggleBtn.textContent = "🔇";
+        } else {
+            bgMusic.play();
+            toggleBtn.textContent = "🔊";
+        }
+        isPlaying = !isPlaying;
+    });
+});
