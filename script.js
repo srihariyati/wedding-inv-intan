@@ -105,7 +105,7 @@ const toggleBtn = document.getElementById("toggleMusic");
 
 let isPlaying = false;
 
-// Mainkan musik saat halaman dimuat (dengan interaksi pengguna)
+// Aktifkan tombol toggle musik
 document.addEventListener("DOMContentLoaded", () => {
     toggleBtn.addEventListener("click", () => {
         if (isPlaying) {
