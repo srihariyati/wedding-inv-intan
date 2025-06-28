@@ -63,7 +63,7 @@ section {
 .img-background {
     position: absolute;
     /* atau 'fixed' jika ingin tetap di tempat saat scroll */
-    top: 50%;
+    top: 0%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
@@ -205,4 +205,68 @@ section {
 .time div {
     font-size: 1rem;
     color: #5D5447;
+}
+
+
+/* ===== RESPONSIVE UNTUK MOBILE ===== */
+
+@media (max-width: 768px) {
+    .container {
+        height: auto;
+    }
+    section {
+        padding: 1rem;
+        text-align: center;
+    }
+    .img-background {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+    .img-content {
+        top: 5%;
+        width: 100%;
+        max-width: 100%;
+    }
+    .box {
+        width: 90%;
+        max-width: 240px;
+        height: auto;
+        padding: 1rem 0.5rem;
+    }
+    .rectangle {
+        width: 100%;
+        padding: 0.5rem;
+        height: auto;
+        flex-direction: column;
+    }
+    .greating-guests,
+    .nama-tamu {
+        font-size: 0.95rem;
+        line-height: 1.4;
+    }
+    .box-click-invitation,
+    .box-save-the-date {
+        width: 80%;
+        max-width: 160px;
+        height: 36px;
+        top: auto;
+        bottom: 60px;
+    }
+    .rectangle-small {
+        font-size: 0.85rem;
+        padding: 0.4rem 0.6rem;
+    }
+    .countdown {
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        top: auto;
+        bottom: 100px;
+    }
+    .time span {
+        font-size: 2rem;
+    }
+    .time div {
+        font-size: 0.9rem;
+    }
 }
