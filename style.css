@@ -165,7 +165,7 @@ section {
 
 .box-save-the-date {
     position: absolute;
-    top: calc(50% + 100px);
+    top: calc(55% + 100px);
     /* atur posisi sesuai layout */
     left: 50%;
     transform: translateX(-50%);
@@ -175,7 +175,7 @@ section {
 
 .countdown {
     position: absolute;
-    top: calc(58% + 150px);
+    top: calc(55% + 150px);
     /* sesuaikan dengan layout */
     left: 50%;
     transform: translateX(-50%);
