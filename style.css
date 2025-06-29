@@ -165,7 +165,7 @@ section {
 
 .box-save-the-date {
     position: absolute;
-    top: calc(58% + 100px);
+    top: calc(50% + 100px);
     /* atur posisi sesuai layout */
     left: 50%;
     transform: translateX(-50%);
