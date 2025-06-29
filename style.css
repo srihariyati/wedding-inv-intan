@@ -63,7 +63,7 @@ section {
 .img-background {
     position: absolute;
     /* atau 'fixed' jika ingin tetap di tempat saat scroll */
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
@@ -86,7 +86,7 @@ section {
 
 .box {
     position: absolute;
-    top: 75%;
+    top: 70%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 260px;
