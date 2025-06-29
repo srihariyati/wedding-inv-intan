@@ -134,7 +134,7 @@ section {
 
 .box-click-invitation {
     position: absolute;
-    top: calc(70% + 100px);
+    top: calc(60% + 100px);
     /* atur posisi sesuai layout */
     left: 50%;
     transform: translateX(-50%);
