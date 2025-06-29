@@ -37,6 +37,7 @@ section {
 #section-profile,
 #section-date,
 #section-rsvp,
+#section-gift,
 #section-end {
     height: 100vh;
     position: relative;
@@ -86,7 +87,7 @@ section {
 
 .box {
     position: absolute;
-    top: 70%;
+    top: 65%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 260px;
