@@ -17,7 +17,7 @@ html {
     display: flex;
     flex-direction: column;
     transition: transform 0.5s ease-in-out;
-    height: 700vh;
+    height: 800vh;
     /* 7 sections, masing-masing 100vh */
 }
 
@@ -87,7 +87,7 @@ section {
 
 .box {
     position: absolute;
-    top: 70%;
+    top: 75%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 260px;
