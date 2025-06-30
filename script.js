@@ -220,3 +220,36 @@ document.addEventListener("DOMContentLoaded", () => {
         }, { once: true });
     }
 });
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const faders = document.querySelectorAll(".fade-in-up");
+
+    const options = {
+        threshold: 0.2
+    };
+
+    const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+            entry.target.classList.add("show");
+            observer.unobserve(entry.target);
+        });
+    }, options);
+
+    faders.forEach(fader => {
+        appearOnScroll.observe(fader);
+    });
+});
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+        }
+    });
+});
+
+document.querySelectorAll('.fade-in-up').forEach((el) => {
+    observer.observe(el);
+});
