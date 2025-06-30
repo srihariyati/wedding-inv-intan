@@ -278,3 +278,7 @@ body::before {
         display: none;
     }
 }
+
+html {
+    scroll-behavior: smooth;
+}
