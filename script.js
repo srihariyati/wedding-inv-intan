@@ -222,6 +222,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+// JavaScript
 document.addEventListener("DOMContentLoaded", function() {
     const faders = document.querySelectorAll(".fade-in-up");
 
@@ -229,27 +230,17 @@ document.addEventListener("DOMContentLoaded", function() {
         threshold: 0.2
     };
 
-    const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+    const appearOnScroll = new IntersectionObserver(function(entries) {
         entries.forEach(entry => {
-            if (!entry.isIntersecting) return;
-            entry.target.classList.add("show");
-            observer.unobserve(entry.target);
+            if (entry.isIntersecting) {
+                entry.target.classList.add("show");
+            } else {
+                entry.target.classList.remove("show"); // Reset saat keluar viewport
+            }
         });
     }, options);
 
     faders.forEach(fader => {
         appearOnScroll.observe(fader);
     });
-});
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('show');
-        }
-    });
-});
-
-document.querySelectorAll('.fade-in-up').forEach((el) => {
-    observer.observe(el);
 });
