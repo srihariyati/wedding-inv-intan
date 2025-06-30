@@ -145,7 +145,6 @@
 //     }
 // });
 
-
 document.addEventListener("DOMContentLoaded", () => {
     // ======== Tampilkan Nama Tamu dari URL ========
     const params = new URLSearchParams(window.location.search);
@@ -203,9 +202,8 @@ document.addEventListener("DOMContentLoaded", () => {
             toggleBtn.textContent = "🔇";
         }
 
-        // Toggle ON/OFF saat tombol diklik
         toggleBtn.addEventListener("click", (e) => {
-            e.stopPropagation(); // cegah event bubbling
+            e.stopPropagation(); // Cegah efek klik lainnya
             if (bgMusic.paused) {
                 playMusic();
             } else {
@@ -213,7 +211,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
 
-        // Auto main musik saat interaksi pertama (bukan tombol)
+        // Auto-play setelah klik pertama (bukan tombol)
         document.addEventListener("click", () => {
             if (!hasInteracted) {
                 playMusic();

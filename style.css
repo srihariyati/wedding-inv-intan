@@ -9,26 +9,33 @@ body,
 html {
     height: 100%;
     width: 100%;
-    overflow: hidden;
+    /* overflow: hidden; */
     font-family: sans-serif;
+    overflow-x: hidden;
+    /* ✅ batasi hanya scroll horizontal jika perlu */
 }
 
 .container {
     display: flex;
     flex-direction: column;
-    transition: transform 0.5s ease-in-out;
-    height: 800vh;
-    /* 7 sections, masing-masing 100vh */
+    /* transition: transform 0.5s ease-in-out; */
+    /* height: 800vh; */
+    transition: none;
+    /* ✅ Hapus transisi jika tidak pakai transform */
+    height: auto;
+    /* ✅ Biarkan kontennya mengatur tinggi */
 }
 
-section {
+.section {
     position: relative;
     width: 100%;
-    height: 100vh;
-    /* agar satu halaman penuh */
+    min-height: 100vh;
+    /* ✅ bisa lebih dari 100vh jika isi banyak */
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    background-color: #DFDED0;
 }
 
 #section-greatings,
@@ -46,7 +53,6 @@ section {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: #DFDED0;
 }
 
 .overlap-group-wrapper {
@@ -237,13 +243,17 @@ section {
 
 .fixed-container {
     width: 1920px;
-    height: 1080px;
+    /* height: 1080px; */
+    height: auto;
+    /* ✅ agar kontennya mengikuti tinggi section */
     max-width: 100vw;
     max-height: 100vh;
     margin: auto;
     position: relative;
     z-index: 1;
-    overflow: hidden;
+    /* overflow: hidden; */
+    overflow: visible;
+    /* ✅ penting agar konten section terlihat */
 }
 
 
