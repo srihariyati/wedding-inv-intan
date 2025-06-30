@@ -157,7 +157,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // ======== Countdown Timer ========
-    const targetDate = new Date("2025-07-11T00:00:00").getTime();
+    const targetDate = new Date("2025-07-11T09:00:00").getTime();
 
     function updateCountdown() {
         const now = new Date().getTime();
@@ -242,5 +242,28 @@ document.addEventListener("DOMContentLoaded", function() {
 
     faders.forEach(fader => {
         appearOnScroll.observe(fader);
+    });
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const giftButton = document.getElementById("giftButton");
+    const giftWrapper = document.getElementById("giftWrapper");
+    const giftBox = document.getElementById("giftBox");
+
+    giftButton.addEventListener("click", function() {
+        giftWrapper.style.display = "none"; // Sembunyikan tombol
+        giftBox.style.display = "block"; // Tampilkan box
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    const openBtn = document.getElementById("openInvitationBtn");
+    const targetSection = document.getElementById("section-greatings");
+
+    openBtn.addEventListener("click", function() {
+        if (targetSection) {
+            targetSection.scrollIntoView({ behavior: 'smooth' });
+        }
     });
 });
