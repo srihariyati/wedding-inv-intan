@@ -154,6 +154,26 @@ html {
     height: 32px;
 }
 
+.click-location-akad {
+    position: absolute;
+    top: calc(26% + 100px);
+    /* atur posisi sesuai layout */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 24px;
+}
+
+.click-location-resepsi {
+    position: absolute;
+    top: calc(70% + 100px);
+    /* atur posisi sesuai layout */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 24px;
+}
+
 .rectangle-small {
     display: flex;
     align-items: center;

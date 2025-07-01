@@ -267,3 +267,17 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const btnAkad = document.getElementById("btnLocationAkad");
+    const btnResepsi = document.getElementById("btnLocationResepsi");
+
+    btnAkad.addEventListener("click", function() {
+        window.open("https://maps.app.goo.gl/drLpreQZd6oceqdH6?g_st=aw", "_blank");
+    });
+
+    btnResepsi.addEventListener("click", function() {
+        window.open("https://maps.app.goo.gl/y9Y1cNn8Rt8ponV96", "_blank");
+    });
+});
