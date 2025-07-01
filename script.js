@@ -281,3 +281,18 @@ document.addEventListener("DOMContentLoaded", function() {
         window.open("https://maps.app.goo.gl/y9Y1cNn8Rt8ponV96", "_blank");
     });
 });
+
+
+document.getElementById('whatsapp-form').addEventListener('submit', function(e) {
+    e.preventDefault(); // Mencegah reload halaman
+
+    const nama = document.getElementById('nama').value.trim();
+    const hadir = document.getElementById('hadir').value;
+    const ucapan = document.getElementById('ucapan').value.trim();
+
+    const pesan = `Halo Intan & Ikhwan! Saya *${nama}* akan *${hadir}* ke acara.\n\nUcapan:\n${ucapan}`;
+    const nomor = '6282361153298'; // ganti 0 dengan 62
+    const url = `https://wa.me/${nomor}?text=${encodeURIComponent(pesan)}`;
+
+    window.open(url, '_blank');
+});

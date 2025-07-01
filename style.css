@@ -313,11 +313,55 @@ html {
 }
 
 .form-container {
-    width: 320px;
-    height: 511px;
+    font-family: sans-serif;
+    color: #AA8550;
+    position: absolute;
+    top: 55%;
+    left: 50%;
     transform: translate(-50%, -50%);
-    display: inline;
+}
+
+.form-rsvp {
+    top: 55%;
+    min-width: 75vw;
+}
+
+form label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+form input,
+form select,
+form textarea {
     width: 100%;
+    padding: 10px;
+    border: 2px solid #b9802a;
+    border-radius: 10px;
+    background-color: transparent;
+    font-size: 16px;
+    box-sizing: border-box;
+    resize: vertical;
+    color: #5c3a01;
+}
+
+form button {
+    margin-top: 20px;
+    width: 100%;
+    background-color: #851128;
+    color: #fff2d5;
+    padding: 12px;
+    border: none;
+    border-radius: 30px;
+    font-size: 18px;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+form button:hover {
+    background-color: #6b0e21;
 }
 
 

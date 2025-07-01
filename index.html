@@ -124,10 +124,27 @@
                     <div class="overlap-group">
                         <img class="img-background fade-in-up delay-1" src="img/bg-section1-greatings.png" />
                         <img class="img-content fade-in-up delay-2" src="img/section6-rsvpbox.png" />
-                        <!-- ⚠️⚠️⚠️tomboll kirim belum aktif -->
-                        <div class="form-container">
 
+                        <div class="form-container">
+                            <form class="form-rsvp fade-in-up delay-2" id="whatsapp-form">
+                                <label for="nama">Nama</label>
+                                <input type="text" id="nama" name="nama" required />
+
+                                <label for="hadir">Hadir</label>
+                                <select id="hadir" name="hadir" required>
+                                    <option value="" disabled selected>Pilih</option>
+                                    <option value="Ya">Ya</option>
+                                    <option value="Tidak">Tidak</option>
+                                </select>
+
+                                <label for="ucapan">Ucapan</label>
+                                <textarea id="ucapan" name="ucapan" rows="5" required></textarea>
+
+                                <button type="submit">Kirim</button>
+                            </form>
                         </div>
+
+
                     </div>
                 </div>
 
