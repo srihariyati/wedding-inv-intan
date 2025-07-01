@@ -143,7 +143,7 @@ document.getElementById('whatsapp-form').addEventListener('submit', function(e) 
     const hadir = document.getElementById('hadir').value;
     const ucapan = document.getElementById('ucapan').value.trim();
 
-    const pesan = `Halo Intan & Ikhwan! Saya *${nama}*, *${hadir}* ke acara.\n\nUcapan:\n${ucapan}`;
+    const pesan = `Halo Intan & Ikhwan!👋 Saya ${nama}, ${hadir} ke acara kalian💖🕊️.\n\n${ucapan}`;
     const nomor = '6282361153298'; // ganti 0 dengan 62
     const url = `https://wa.me/${nomor}?text=${encodeURIComponent(pesan)}`;
 
