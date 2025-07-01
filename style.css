@@ -179,7 +179,7 @@ html {
 
 .click-location-resepsi {
     position: absolute;
-    top: calc(70% + 100px);
+    top: calc(69% + 100px);
     /* atur posisi sesuai layout */
     left: 50%;
     transform: translateX(-50%);
