@@ -296,3 +296,27 @@ document.getElementById('whatsapp-form').addEventListener('submit', function(e) 
 
     window.open(url, '_blank');
 });
+
+
+// Tombol buka undangan
+const openBtn = document.getElementById('openInvitationBtn');
+// Section countdown
+const countdownSection = document.getElementById('section-countdown');
+// Flag untuk mengecek apakah sudah diizinkan scroll
+let isInvitationOpened = false;
+
+// Ketika tombol diklik
+openBtn.addEventListener('click', function() {
+    isInvitationOpened = true;
+    countdownSection.scrollIntoView({ behavior: 'smooth' });
+});
+
+// Cegah scroll manual ke section countdown sebelum tombol diklik
+window.addEventListener('scroll', function() {
+    if (!isInvitationOpened) {
+        const sectionTop = countdownSection.offsetTop;
+        if (window.scrollY >= sectionTop - 10) {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    }
+});
