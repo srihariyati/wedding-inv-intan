@@ -1,150 +1,3 @@
-// document.addEventListener("DOMContentLoaded", () => {
-//     // ======== Navigasi Section (Scroll, Click, Swipe) ========
-//     let currentSection = 0;
-//     const sections = document.querySelectorAll(".section");
-//     const totalSections = sections.length;
-//     const container = document.querySelector(".container");
-
-//     function updateSection() {
-//         container.style.transform = `translateY(-${currentSection * 100}vh)`;
-//     }
-
-//     // Scroll (desktop)
-//     let isScrolling = false;
-//     document.addEventListener("wheel", function(e) {
-//         if (isScrolling) return;
-//         isScrolling = true;
-
-//         if (e.deltaY > 0 && currentSection < totalSections - 1) {
-//             currentSection++;
-//         } else if (e.deltaY < 0 && currentSection > 0) {
-//             currentSection--;
-//         }
-
-//         updateSection();
-
-//         setTimeout(() => {
-//             isScrolling = false;
-//         }, 800);
-//     });
-
-//     // Swipe (mobile)
-//     let touchStartY = 0;
-//     let touchEndY = 0;
-
-//     document.addEventListener("touchstart", function(e) {
-//         touchStartY = e.touches[0].clientY;
-//     });
-
-//     document.addEventListener("touchend", function(e) {
-//         touchEndY = e.changedTouches[0].clientY;
-//         handleSwipe();
-//     });
-
-//     function handleSwipe() {
-//         const swipeDistance = touchStartY - touchEndY;
-
-//         if (swipeDistance > 50 && currentSection < totalSections - 1) {
-//             currentSection++;
-//         } else if (swipeDistance < -50 && currentSection > 0) {
-//             currentSection--;
-//         }
-
-//         updateSection();
-//     }
-
-//     // Klik layar untuk pindah section (atas/bawah)
-//     document.addEventListener("click", function(e) {
-//         const toggleBtn = document.getElementById("toggleMusic");
-//         if (toggleBtn && toggleBtn.contains(e.target)) return; // Jangan scroll kalau klik tombol musik
-
-//         const middle = window.innerHeight / 2;
-
-//         if (e.clientY > middle && currentSection < totalSections - 1) {
-//             currentSection++;
-//         } else if (e.clientY <= middle && currentSection > 0) {
-//             currentSection--;
-//         }
-
-//         updateSection();
-//     });
-
-//     // ======== Tampilkan Nama Tamu dari URL ========
-//     const params = new URLSearchParams(window.location.search);
-//     const nama = params.get('to');
-//     if (nama) {
-//         const namaTamuEl = document.getElementById('namaTamu');
-//         if (namaTamuEl) {
-//             namaTamuEl.textContent = decodeURIComponent(nama);
-//         }
-//     }
-
-//     // ======== Countdown Timer ========
-//     const targetDate = new Date("2025-07-11T00:00:00").getTime();
-
-//     function updateCountdown() {
-//         const now = new Date().getTime();
-//         const gap = targetDate - now;
-
-//         if (gap < 0) {
-//             document.querySelector(".countdown").innerHTML = "Acara telah berlangsung";
-//             return;
-//         }
-
-//         const days = Math.floor(gap / (1000 * 60 * 60 * 24));
-//         const hours = Math.floor((gap % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-//         const minutes = Math.floor((gap % (1000 * 60 * 60)) / (1000 * 60));
-//         const seconds = Math.floor((gap % (1000 * 60)) / 1000);
-
-//         document.getElementById("days").textContent = days;
-//         document.getElementById("hours").textContent = hours;
-//         document.getElementById("minutes").textContent = minutes;
-//         document.getElementById("seconds").textContent = seconds;
-//     }
-
-//     updateCountdown();
-//     setInterval(updateCountdown, 1000);
-
-//     // ======== Musik Background & Tombol Toggle ========
-//     const bgMusic = document.getElementById("bgMusic");
-//     const toggleBtn = document.getElementById("toggleMusic");
-
-//     let hasInteracted = false;
-
-//     if (bgMusic && toggleBtn) {
-//         function playMusic() {
-//             bgMusic.play().then(() => {
-//                 toggleBtn.textContent = "🔊";
-//             }).catch(err => {
-//                 console.warn("Autoplay gagal:", err.message);
-//             });
-//         }
-
-//         function pauseMusic() {
-//             bgMusic.pause();
-//             toggleBtn.textContent = "🔇";
-//         }
-
-//         // Toggle ON/OFF saat tombol diklik
-//         toggleBtn.addEventListener("click", (e) => {
-//             e.stopPropagation(); // cegah scroll section saat klik tombol
-//             if (bgMusic.paused) {
-//                 playMusic();
-//             } else {
-//                 pauseMusic();
-//             }
-//         });
-
-//         // Auto main musik saat interaksi pertama (bukan tombol)
-//         document.addEventListener("click", () => {
-//             if (!hasInteracted) {
-//                 playMusic();
-//                 hasInteracted = true;
-//             }
-//         }, { once: true });
-//     }
-// });
-
 document.addEventListener("DOMContentLoaded", () => {
     // ======== Tampilkan Nama Tamu dari URL ========
     const params = new URLSearchParams(window.location.search);
@@ -298,25 +151,47 @@ document.getElementById('whatsapp-form').addEventListener('submit', function(e) 
 });
 
 
-// Tombol buka undangan
-const openBtn = document.getElementById('openInvitationBtn');
-// Section countdown
-const countdownSection = document.getElementById('section-countdown');
-// Flag untuk mengecek apakah sudah diizinkan scroll
-let isInvitationOpened = false;
+function smoothScrollTo(targetY, duration = 800) {
+    console.log("masohkkk");
 
-// Ketika tombol diklik
-openBtn.addEventListener('click', function() {
-    isInvitationOpened = true;
-    countdownSection.scrollIntoView({ behavior: 'smooth' });
-});
+    const startY = window.scrollY;
+    const distanceY = targetY - startY;
+    const startTime = performance.now();
+    console.log("targetY", targetY, "startY", startY);
 
-// Cegah scroll manual ke section countdown sebelum tombol diklik
-window.addEventListener('scroll', function() {
-    if (!isInvitationOpened) {
-        const sectionTop = countdownSection.offsetTop;
-        if (window.scrollY >= sectionTop - 10) {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+    function step(currentTime) {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+
+        // Ease in-out cubic (smooth effect)
+        const ease = progress < 0.5 ?
+            4 * progress * progress * progress :
+            1 - Math.pow(-2 * progress + 2, 3) / 2;
+
+        window.scrollTo(0, startY + distanceY * ease);
+
+        if (progress < 1) {
+            requestAnimationFrame(step);
         }
+        console.log(progress);
+    }
+
+    requestAnimationFrame(step);
+}
+
+
+const openBtn = document.getElementById('openInvitationBtn');
+
+// Kunci scroll awal
+document.body.classList.add('lock-scroll');
+
+document.getElementById('openInvitationBtn').addEventListener('click', function() {
+    document.body.classList.remove('lock-scroll');
+    const countdownSection = document.getElementById('section-countdown');
+    if (countdownSection) {
+        const offset = countdownSection.offsetTop;
+        smoothScrollTo(offset);
+    } else {
+        console.error("❌ Section countdown tidak ditemukan saat klik.");
     }
 });

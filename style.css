@@ -11,7 +11,7 @@ html {
     width: 100%;
     /* overflow: hidden; */
     font-family: sans-serif;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     /* ✅ batasi hanya scroll horizontal jika perlu */
     background-color: #DFDED0;
 }
@@ -42,6 +42,11 @@ html {
     background-color: #DFDED0;
     padding: 0;
     margin: 0;
+}
+
+body.lock-scroll {
+    overflow: hidden;
+    height: 100vh;
 }
 
 #section-greatings,
