@@ -121,6 +121,19 @@ html {
     flex-direction: column;
 }
 
+.rectangle-gift {
+    width: 100%;
+    height: 100%;
+    background-color: #fffde899;
+    border-radius: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    top: calc(55% + 100px);
+}
+
 .greating-wrapper {
     display: flex;
     flex-direction: column;
@@ -241,7 +254,7 @@ html {
 
 .box-gift-information {
     position: absolute;
-    top: calc(40% + 100px);
+    top: calc(45% + 100px);
     /* atur posisi sesuai layout */
     left: 50%;
     transform: translateX(-50%);
